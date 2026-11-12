@@ -124,6 +124,7 @@ def run_with_holdout(days=30, per_day=1000, runs=300, holdout=0.1, floor=0.05,
             before += y.sum(axis=1)
             continue
         t = d - 7
+        # no learner ids in this sim, so a per-send draw stands in for a sticky learner-level holdout
         in_holdout = rng.random((runs, per_day)) < holdout
         p = thompson_probs(wins, sends, rng, floor)
         u = rng.random((runs, per_day))[..., None]

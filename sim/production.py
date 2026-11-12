@@ -135,7 +135,7 @@ def ucb_lessons(seen, eligible, rng):
     """UCB1 on resolved lessons. Deterministic: in a daily batch every
     eligible learner gets the same top message."""
     n = seen.sends_resolved
-    t = max(n.sum(axis=1).max(), 1.0)
+    t = np.maximum(n.sum(axis=1, keepdims=True), 1.0)   # sends so far, per run
     mean = np.divide(seen.lessons_resolved, n, out=np.zeros_like(n), where=n > 0)
     score = np.where(n > 0, mean + np.sqrt(2 * np.log(t) / np.maximum(n, 1)), np.inf)
     scores = np.broadcast_to(score[:, None, :], eligible.shape)

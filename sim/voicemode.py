@@ -5,7 +5,7 @@ per learner, with the per-user sums an experimentation pipeline would
 compute from event logs.
 
 True effects (relative, treatment vs control):
-  lessons per learner      +4%     (decision metric, CUPED on pre-period lessons)
+  lessons per learner      +4% on the variable part, about +3.6% overall (decision metric, CUPED on pre-period lessons)
   completion per lesson    +2%     (ratio)
   latency per turn         +6%     (guardrail, margin 10%)
   cost per lesson          +15%    (guardrail, margin 10%: fails)

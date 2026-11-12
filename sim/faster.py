@@ -58,7 +58,7 @@ def daily_estimates(days=28, per_day=500, lift=0.0, reps=500, use_cuped=False, s
 
     Returns (estimate, se) arrays of shape (reps, days): the difference in
     means (treatment - control) using everyone enrolled so far, with or
-    without CUPED. `sampler(n, lift, rng_seed, reps)` returns (pre, post).
+    without CUPED. `sampler(n, effect, seed=..., reps=...)` returns (pre, post).
     """
     sampler = sampler or weekly_goals
     # running sums per arm: n, x, y, x^2, y^2, xy

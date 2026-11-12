@@ -93,7 +93,7 @@ def srm_table(df: pd.DataFrame, exp: Experiment) -> pd.DataFrame:
 # --------------------------------------------------------------------------
 
 def _arm_stats(df, m: Metric, theta: float, x_mean: float):
-    """Mean of the metric for one arm and its variance, per user."""
+    """Mean of the metric for one arm (per user) and the variance of that mean."""
     y = df[m.numerator].to_numpy(float)
     if m.denominator is None:
         if m.covariate is not None:

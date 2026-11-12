@@ -47,7 +47,7 @@ In Google Colab, open a notebook from this repository and run the first cell: it
 | [15](chapters/15-lift-engine.ipynb) | Build Your Own Lift Engine |
 | [B](chapters/appendix-b-pingouin-cheatsheet.ipynb) | Appendix B: Pingouin and Friends, a Cheat Sheet |
 
-Chapters 11, 14 and 15 fit machine-learning models and take a minute or two; the rest run in seconds.
+Chapters 11 and 14 fit machine-learning models and Chapter 15 runs a few hundred simulated tests; each takes a minute or two. The rest run in seconds.
 
 ## Layout
 

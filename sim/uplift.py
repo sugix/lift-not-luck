@@ -75,7 +75,7 @@ def review_test(n=80_000, seed=1):
 
 
 # --------------------------------------------------------------------------
-# Learners of heterogeneous effects
+# Meta-learners for heterogeneous effects
 # --------------------------------------------------------------------------
 
 def _gbm(seed):
@@ -106,7 +106,7 @@ def dr_learner(X_train, t_train, y_train, X_test, e=0.5, folds=5, seed=0):
 
 
 def uplift_curve(score, t, y, e=0.5, points=21):
-    """Incremental outcome per learner if we treat the top `share` by score,
+    """Incremental outcome per learner for each share of learners treated, best score first,
     estimated from randomised data with inverse propensity weights."""
     order = np.argsort(-score)
     t, y = t[order], y[order]

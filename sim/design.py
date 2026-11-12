@@ -54,7 +54,7 @@ def simulate_power(n, p=BASELINE, lift=TRUE_LIFT, reps=4000, alpha=0.05, seed=0)
 # Juno: a per-lesson metric in a per-learner test
 # --------------------------------------------------------------------------
 
-# Juno on the large model (Chapter 7), and a trimmed system prompt that cuts
+# Juno's completion with its current prompt, and a trimmed system prompt that cuts
 # token cost by 30% but quietly costs one point of completion.
 JUNO_COMPLETION = {"current prompt": 0.78, "short prompt": 0.77}
 LEARNER_SPREAD = 4.0   # Beta concentration: smaller = learners differ more

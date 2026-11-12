@@ -147,7 +147,7 @@ def switchback(days=14, block_min=60, lessons_per_min=40, seed=0):
         level += alpha * (share[m] - level)
         load[m] = level
     hour = (np.arange(minutes) // 60) % 24
-    daily = 0.03 * np.sin(2 * np.pi * (hour - 8) / 24)   # learners do better in the evening
+    daily = 0.03 * np.sin(2 * np.pi * (hour - 8) / 24)   # learners do best mid-afternoon (peak 14:00)
     traffic = rng.poisson(lessons_per_min * (1 + 0.5 * np.sin(2 * np.pi * (hour - 14) / 24)))
     p = completion_rate(share, load) + daily
     done = rng.binomial(traffic, np.clip(p, 0, 1))
