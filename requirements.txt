@@ -1,0 +1,9 @@
+# The versions the book was built and these notebooks were verified with (Python 3.12).
+matplotlib==3.11.2
+numpy==2.5.4
+pandas==3.1.1
+pingouin==0.7.0
+scikit-learn==1.9.1
+scipy==1.18.1
+statsmodels==0.15.0
+jupyter
